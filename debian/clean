@@ -1,0 +1,19 @@
+## Debian CI:
+debian/.gitlab-ci.yml
+
+libocispec/src/oci_*_spec.*
+
+#FIXME: https://github.com/containers/crun/issues/240
+#libocispec/src/*_spec_schema_*
+
+aclocal.m4
+config.h
+config.log
+config.status
+libocispec/aclocal.m4
+libocispec/build-aux/ltmain.sh
+libocispec/m4/libtool.m4
+libtool
+Makefile
+rpm/crun.spec
+stamp-h1

@@ -1,0 +1,10 @@
+# uscan(1) configuration file.
+version=4
+
+opts="\
+pgpmode=auto,\
+repack,compression=xz,repacksuffix=+dfsg,\
+dversionmangle=s{[+~]dfsg\d*}{},\
+pgpsigurlmangle=s/$/.asc/ \
+" https://github.com/containers/crun/releases \
+  .*/download/(?:\d[\d\.]+)/crun-(\d[\d\.]+)\.tar\.xz

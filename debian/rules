@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+#include /usr/share/dpkg/pkg-info.mk
+
+%:
+	dh $@ --buildsystem=autoconf
+
+override_dh_auto_clean:
+	-dh_auto_clean
+
+override_dh_clean:
+	dh_clean
+
+override_dh_auto_configure:
+	dh_auto_configure
+#	FIXME: https://github.com/containers/crun/issues/240
+#	$(MAKE) -C libocispec generate
+
+override_dh_auto_test:
+	-dh_auto_test
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+	-$(RM) debian/tmp/usr/lib/*/*.la

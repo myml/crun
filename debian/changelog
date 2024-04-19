@@ -1,0 +1,93 @@
+crun (0.17+dfsg-1+deb11u2) bullseye; urgency=medium
+
+  * Backport two commits from upstream ("ignore ENOTSUP when chmod a
+    symlink"), that restore containers with systemd as their init system, when
+    running under Linux >= v6.6, >= v6.1.55 and >= 5.10.197, i.e. bullseye's
+    and bookworm's current stable kernels. (Closes: #1053821)
+
+ -- Faidon Liambotis <paravoid@debian.org>  Thu, 02 Nov 2023 18:52:46 +0200
+
+crun (0.17+dfsg-1+deb11u1) bullseye; urgency=medium
+
+  * Backport upstream commits b847d14 ("spec: do not set inheritable
+    capabilities") and 1aeeed2 ("exec: --cap do not set inheritable
+    capabilities") to address CVE-2022-27650, a flaw where containers were
+    incorrectly started with non-empty default permissions.
+  * Sync Uploaders from unstable, to indicate that this a maintainer upload.
+
+ -- Faidon Liambotis <paravoid@debian.org>  Sat, 11 Feb 2023 23:44:44 +0200
+
+crun (0.17+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 01 Feb 2021 12:33:51 +1100
+
+crun (0.16+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 07 Jan 2021 16:31:49 +1100
+
+crun (0.15.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 19 Nov 2020 22:32:23 +1100
+
+crun (0.15+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * rules: don't install .la file.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 24 Sep 2020 06:44:34 +1000
+
+crun (0.14.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 17 Jul 2020 23:14:03 +1000
+
+crun (0.13+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Rules-Requires-Root: no.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 06 Apr 2020 09:56:09 +1000
+
+crun (0.12.2.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 28 Feb 2020 19:04:21 +1100
+
+crun (0.12.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 12 Feb 2020 12:51:41 +1100
+
+crun (0.12+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Standards-Version: 4.5.0.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 04 Feb 2020 12:32:26 +1100
+
+crun (0.11+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 24 Dec 2019 13:09:41 +1100
+
+crun (0.10.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Mon, 18 Nov 2019 20:56:31 +1100
+
+crun (0.10.5+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #944087).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Sun, 10 Nov 2019 12:28:16 +1100

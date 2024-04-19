@@ -1,0 +1,4 @@
+CVE-2022-27650-b847d14.patch
+CVE-2022-27650-1aeeed2.patch
+utils-ignore-ENOTSUP-when-chmod-a-symlink.patch
+utils-fix-ignore-ENOTSUP-when-chmod-a-symlink.patch
